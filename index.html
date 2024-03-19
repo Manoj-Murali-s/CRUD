@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* CSS styles for edit and delete buttons */
+        .edit-btn {
+            background-color: #4299e1; /* Blue color */
+            color: #fff;
+            padding:4px 8px; border-radius: 8px; margin: 0px 0px 0px 2px;
+        }
+
+        .delete-btn {
+            background-color: #e53e3e; /* Red color */
+            color: #fff; padding:4px 8px; border-radius: 8px; margin: 0px 2px 0px 0px;
+        }
+        li{
+            padding: 4px 2px;
+            text-transform: capitalize;
+       }  li button{
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mx-auto max-w-xl h-screen grid place-items-center p-10">
+        <div class="w-full flex flex-col gap-3 shadow p-14 border border-1 rounded-lg">
+            <h1 class="text-red-600 font-bold underline text-center w-4/5 mx-auto text-3xl mb-2">CRUD App</h1>
+            <form id="item-form">
+                <div class="relative w-4/5 mx-auto">
+                    <input type="text" id="item-name" name="item-name"
+                        class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-600 peer"
+                        placeholder="Enter item name" />
+                    <label for="item-name"
+                        class="absolute w-40  peer-focus:w-24 text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-gray-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">Item
+                        Name:</label>
+                
+                <button type="submit"
+                    class="absolute right-0 inset-y-0 bg-gray-300 text-gray-900 hover:bg-gray-100 border border-gray-200 focus:outline-none font-medium rounded-r-lg text-sm px-5 m-px inline-flex items-center">
+                    <img src="./images/create.png" alt="" class="w-5 mr-3" srcset="">
+                    Create
+                </button></div>
+            </form>
+            <ul class="w-4/5 mx-auto grid gap-3" id="items-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
